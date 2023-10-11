@@ -12,18 +12,36 @@
     body{
         background-color: #f78484b3;
     }
+    .container {
+    height: 200px;
+    position: relative;
+    border: 3px solid green;
+    }
+
+    .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    }
 </style>
 </head>
 <body>
 
   <h2 style="color:rgb(0, 0, 0);font-family: 'Courier New', Courier, monospace;"class="text-center"><b><i>SumanthKumar Sivadi speed check</i></b></h2>
 
-  <div id="target">Your Time</div>
-  <div id="counter">Count</div>
+  <div class="container">
+    <div class="vertical-center">
+        <div id="target" class="text-center">Your Time</div>
+        <div id="counter" class="text-center">Count</div>
 
-  <button type="button" class="btn btn-primary" onclick="startTime()">Start Time</button>
-  <button type="button" class="btn btn-primary" onclick="recordTime()">React</button>
+        <button type="button" class="btn btn-primary" onclick="startTime()">Start Time</button>
+        <button type="button" class="btn btn-primary" onclick="recordTime()">React</button>
   
+    </div>
+</div>
+
   <script> 
     var reactTime=undefined;
 
@@ -53,6 +71,9 @@
         }, 8*1000);
     }
   </script>
+<footer>
+    <p>&copy; 2023 SumanthKumar Sivadi</p>
+</footer>
 
 </body>
 </html>

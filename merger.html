@@ -33,23 +33,38 @@
 		<div class="merger"><i>Row Item 3</i></div>
 	</div>
 	<br>
-	
+	<div>
 		<input type="text" id="inText" value="Enter Input">
 		<button type="button" class="btn btn-primary" onclick="addEnd()">Add end</button>
-	
+		<button type="button" class="btn btn-primary" onclick="addFront()">Add front</button>
+		<button type="button" class="btn btn-primary" onclick="remove()">Remove</button>
+	</div>
 	
 </body>
 <script>
-	function makeNewDiv(){
-		/* make the div and its text */
-		let element = document.createElement("div")
-		element.innerHTML = "an item after 3"
-		element.style.color = "orange"
-
-		/* add it to the container */
-		let container = document.getElementById('target')
-		container.appendChild(element)
-		
+	function addEnd() {
+        let element = document.createElement("div");
+        let inValue = document.getElementById('inText').value;
+        element.innerHTML = inValue;
+        element.className = "merger";
+        let container = document.getElementById('target');
+        container.appendChild(element);
+    };
+    function remove() {
+        let mergerItems = document.getElementsByClassName("merger");
+        let itemsLength = mergerItems.length;
+        if (itemsLength > 0) {
+            let mid = Math.floor(itemsLength / 2);
+            mergerItems[mid].remove();
+        };
 	}
+    function addFront() {
+        let element = document.createElement("div");
+        let inValue = document.getElementById('inText').value;
+        element.innerHTML = inValue;
+        element.className = "merger";
+        let container = document.getElementById("target");
+        container.insertBefore(element, container.firstChild);
+    }
 </script>
 </html>	

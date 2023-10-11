@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Reaction page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body{
+        background-color: #f78484b3;
+    }
+</style>
+</head>
+<body>
+
+  <h2 style="color:rgb(0, 0, 0);font-family: 'Courier New', Courier, monospace;"class="text-center"><b><i>SumanthKumar Sivadi speed check</i></b></h2>
+
+  <div id="target">Your Time</div>
+  <div id="counter">Count</div>
+
+  <button type="button" class="btn btn-primary">Start Time</button>
+  <button type="button" class="btn btn-primary" onclick="recordTime()">React</button>
+  
+  <script> 
+    var reactTime=undefined;
+
+  function recordTime() {
+    reactTime=Date.now();
+    console.log(reactTime)
+  }
+  
+  </script>
+
+</body>
+</html>

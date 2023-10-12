@@ -44,7 +44,7 @@
 
   <script> 
     var reactTime=undefined;
-
+    var mathEq=((Math.floor(Math.random()*(8+1))+2));
   function recordTime() {
     reactTime=Date.now();
     console.log(reactTime)
@@ -57,7 +57,7 @@
         for (let i=0; i<9; i++) {
             setTimeout(() => {
                 Counter.innerHTML = i
-            }, ((8-i)*1000));
+            }, ((mathEq-i)*1000));
         }
         setTimeout(() => {
             if (reactTime === undefined) {
@@ -68,7 +68,7 @@
                 var elapsedTime = endTime - reactTime
                 Target.innerHTML = "Time was "+ elapsedTime +"milliseconds";
             }
-        }, 8*1000);
+        }, mathEq*1000);
     }
   </script>
 <footer>
